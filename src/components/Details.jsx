@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const MovieDetails = () => {
-  const { movieId } = useParams();
   const [movie, setMovie] = useState(null);
+  const { movieId } = useParams();
 
   useEffect(() => {
     fetch("https://www.omdbapi.com/?i=" + movieId + "&apikey=7a3d7aa5")
