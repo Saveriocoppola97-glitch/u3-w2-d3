@@ -7,7 +7,6 @@ import MainSection from "./components/MainSection";
 import FooterNtx from "./components/FooterNtx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Details from "./components/Details";
-import Recently from "./components/Recently";
 
 function App() {
   return (
@@ -29,8 +28,11 @@ function App() {
           path="/movies"
           element={<MainSection title="New Releases" query="star wars" />}
         />
+        <Route
+          path="/recently-added"
+          element={<MainSection title="New Releases" query="breaking bad" />}
+        />
         <Route path="/movie-details/:movieId" element={<Details />} />
-        <Route path="/recently-added" element={<Recently />} />
       </Routes>
       <footer>
         <FooterNtx />
