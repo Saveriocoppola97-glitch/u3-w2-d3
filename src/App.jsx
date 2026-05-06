@@ -7,6 +7,7 @@ import MainSection from "./components/MainSection";
 import FooterNtx from "./components/FooterNtx";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Details from "./components/Details";
+import Recently from "./components/Recently";
 
 function App() {
   return (
@@ -21,14 +22,15 @@ function App() {
           element={<MainSection title="Trending Now" query="avengers" />}
         />
         <Route
-          path="tv-shows"
+          path="/tv-shows"
           element={<MainSection title="Watch it Again" query="harry potter" />}
         />
         <Route
-          path="movies"
+          path="/movies"
           element={<MainSection title="New Releases" query="star wars" />}
         />
         <Route path="/movie-details/:movieId" element={<Details />} />
+        <Route path="/recently-added" element={<Recently />} />
       </Routes>
       <footer>
         <FooterNtx />

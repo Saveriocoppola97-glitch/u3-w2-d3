@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const MainSection = ({ title, query }) => {
@@ -30,6 +30,7 @@ const MainSection = ({ title, query }) => {
     <div className="container-fluid px-4 my-3 min-vh-100">
       <h3 className="text-white mb-3">{title}</h3>
       {console.log(allFilm)}
+
       <div className="row justify-content-center">
         {allFilm.slice(0, 6).map((film) => (
           <div
